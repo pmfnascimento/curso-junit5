@@ -50,4 +50,14 @@ public class Usuario {
     public int hashCode() {
         return Objects.hash(nome, email, senha);
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
+    }
 }
