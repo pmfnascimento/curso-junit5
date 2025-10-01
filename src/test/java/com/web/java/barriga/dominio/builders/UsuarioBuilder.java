@@ -20,7 +20,7 @@ public class UsuarioBuilder {
 
     public static void init(UsuarioBuilder builder) {
         builder.id = 1L;
-        builder.nome = "Pedro";
+        builder.nome = "Usuário Válido";
         builder.email = "email@email.com";
         builder.senha = "22334455";
     }

@@ -2,7 +2,7 @@ package com.web.java.barriga.service;
 
 import com.web.java.barriga.dominio.Usuario;
 import com.web.java.barriga.dominio.exceptions.ValidationException;
-import com.web.java.barriga.repositories.UsuarioRepository;
+import com.web.java.barriga.repositorie.UsuarioRepository;
 
 import java.util.Optional;
 

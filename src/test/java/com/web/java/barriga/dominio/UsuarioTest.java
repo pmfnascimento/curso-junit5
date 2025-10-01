@@ -14,16 +14,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class UsuarioTest {
+public class UsuarioTest {
 
     @Test
     void deve_criar_um_usuario_valido(){
 
         Usuario usuario = UsuarioBuilder.umUsuario().build();
-
+        System.out.println(usuario);
         assertAll("Usuario",
             () -> assertEquals(1L, usuario.getId()),
-            () -> assertEquals("Pedro", usuario.getNome()),
+            () -> assertEquals("Usuário Válido", usuario.getNome()),
             () -> assertEquals("email@email.com", usuario.getEmail()),
             () -> assertEquals("22334455", usuario.getSenha())
         );
@@ -64,7 +64,7 @@ class UsuarioTest {
 //    )
     @ParameterizedTest
     @CsvFileSource(
-               files = "src\\test\\resources\\composObrigatoriosUsuario.csv",
+               files = "src\\test\\resources\\camposObrigatoriosUsuario.csv",
                 nullValues = {"null"},
     useHeadersInDisplayName = false,
     numLinesToSkip = 1)
@@ -75,5 +75,6 @@ class UsuarioTest {
         });
         assertEquals(mensagem, ex.getMessage());
     }
+
 
 }

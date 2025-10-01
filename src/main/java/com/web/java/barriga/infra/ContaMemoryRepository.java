@@ -2,11 +2,10 @@ package com.web.java.barriga.infra;
 
 import com.web.java.barriga.dominio.Conta;
 import com.web.java.barriga.dominio.Usuario;
-import com.web.java.barriga.repositories.ContaRepository;
+import com.web.java.barriga.repositorie.ContaRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ContaMemoryRepository implements ContaRepository {
 
@@ -32,6 +31,9 @@ public class ContaMemoryRepository implements ContaRepository {
         return null;
     }
 
+    @Override public void delete(Conta conta) {
+        contas.remove(conta);
+    }
 
     private Long nextId() {
         return ++currentId;

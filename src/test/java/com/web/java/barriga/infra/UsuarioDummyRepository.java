@@ -2,7 +2,7 @@ package com.web.java.barriga.infra;
 
 import com.web.java.barriga.dominio.Usuario;
 import com.web.java.barriga.dominio.builders.UsuarioBuilder;
-import com.web.java.barriga.repositories.UsuarioRepository;
+import com.web.java.barriga.repositorie.UsuarioRepository;
 
 import java.util.Optional;
 
